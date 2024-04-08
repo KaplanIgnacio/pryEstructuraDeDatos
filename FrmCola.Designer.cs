@@ -29,41 +29,41 @@
         private void InitializeComponent()
         {
             this.marcoNuevoElemento = new System.Windows.Forms.GroupBox();
-            this.lblTramite1 = new System.Windows.Forms.Label();
-            this.lblNombre1 = new System.Windows.Forms.Label();
-            this.lblCodigo1 = new System.Windows.Forms.Label();
             this.btnAgregar1 = new System.Windows.Forms.Button();
             this.lblTram = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
             this.marcoElementoEliminado = new System.Windows.Forms.GroupBox();
-            this.lblCodigo2 = new System.Windows.Forms.Label();
-            this.lblNombre2 = new System.Windows.Forms.Label();
-            this.lblTramite2 = new System.Windows.Forms.Label();
-            this.btnAgregar2 = new System.Windows.Forms.Button();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblTramite = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCodi = new System.Windows.Forms.Label();
             this.marcoLIstayGrilla = new System.Windows.Forms.GroupBox();
-            this.dgvDatosCliente = new System.Windows.Forms.DataGridView();
+            this.dgvCola = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lstCola = new System.Windows.Forms.ListView();
             this.btnVolver2 = new System.Windows.Forms.Button();
             this.pctImagenCola = new System.Windows.Forms.PictureBox();
+            this.lstCola = new System.Windows.Forms.ListBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtTramite = new System.Windows.Forms.TextBox();
             this.marcoNuevoElemento.SuspendLayout();
             this.marcoElementoEliminado.SuspendLayout();
             this.marcoLIstayGrilla.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctImagenCola)).BeginInit();
             this.SuspendLayout();
             // 
             // marcoNuevoElemento
             // 
-            this.marcoNuevoElemento.Controls.Add(this.lblTramite1);
-            this.marcoNuevoElemento.Controls.Add(this.lblNombre1);
-            this.marcoNuevoElemento.Controls.Add(this.lblCodigo1);
+            this.marcoNuevoElemento.Controls.Add(this.txtTramite);
+            this.marcoNuevoElemento.Controls.Add(this.txtNombre);
+            this.marcoNuevoElemento.Controls.Add(this.txtCodigo);
             this.marcoNuevoElemento.Controls.Add(this.btnAgregar1);
             this.marcoNuevoElemento.Controls.Add(this.lblTram);
             this.marcoNuevoElemento.Controls.Add(this.lblNom);
@@ -75,30 +75,6 @@
             this.marcoNuevoElemento.TabStop = false;
             this.marcoNuevoElemento.Text = "Nuevo Elemento";
             // 
-            // lblTramite1
-            // 
-            this.lblTramite1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTramite1.Location = new System.Drawing.Point(93, 106);
-            this.lblTramite1.Name = "lblTramite1";
-            this.lblTramite1.Size = new System.Drawing.Size(69, 19);
-            this.lblTramite1.TabIndex = 6;
-            // 
-            // lblNombre1
-            // 
-            this.lblNombre1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombre1.Location = new System.Drawing.Point(93, 70);
-            this.lblNombre1.Name = "lblNombre1";
-            this.lblNombre1.Size = new System.Drawing.Size(69, 19);
-            this.lblNombre1.TabIndex = 5;
-            // 
-            // lblCodigo1
-            // 
-            this.lblCodigo1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCodigo1.Location = new System.Drawing.Point(93, 40);
-            this.lblCodigo1.Name = "lblCodigo1";
-            this.lblCodigo1.Size = new System.Drawing.Size(69, 19);
-            this.lblCodigo1.TabIndex = 4;
-            // 
             // btnAgregar1
             // 
             this.btnAgregar1.Location = new System.Drawing.Point(32, 149);
@@ -107,6 +83,7 @@
             this.btnAgregar1.TabIndex = 3;
             this.btnAgregar1.Text = "Agregar";
             this.btnAgregar1.UseVisualStyleBackColor = true;
+            this.btnAgregar1.Click += new System.EventHandler(this.btnAgregar1_Click);
             // 
             // lblTram
             // 
@@ -137,10 +114,10 @@
             // 
             // marcoElementoEliminado
             // 
-            this.marcoElementoEliminado.Controls.Add(this.lblCodigo2);
-            this.marcoElementoEliminado.Controls.Add(this.lblNombre2);
-            this.marcoElementoEliminado.Controls.Add(this.lblTramite2);
-            this.marcoElementoEliminado.Controls.Add(this.btnAgregar2);
+            this.marcoElementoEliminado.Controls.Add(this.lblCodigo);
+            this.marcoElementoEliminado.Controls.Add(this.lblNombre);
+            this.marcoElementoEliminado.Controls.Add(this.lblTramite);
+            this.marcoElementoEliminado.Controls.Add(this.btnEliminar);
             this.marcoElementoEliminado.Controls.Add(this.label2);
             this.marcoElementoEliminado.Controls.Add(this.label1);
             this.marcoElementoEliminado.Controls.Add(this.lblCodi);
@@ -151,38 +128,39 @@
             this.marcoElementoEliminado.TabStop = false;
             this.marcoElementoEliminado.Text = "Elemento Eliminado";
             // 
-            // lblCodigo2
+            // lblCodigo
             // 
-            this.lblCodigo2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCodigo2.Location = new System.Drawing.Point(84, 40);
-            this.lblCodigo2.Name = "lblCodigo2";
-            this.lblCodigo2.Size = new System.Drawing.Size(69, 19);
-            this.lblCodigo2.TabIndex = 7;
+            this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodigo.Location = new System.Drawing.Point(84, 40);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(69, 19);
+            this.lblCodigo.TabIndex = 7;
             // 
-            // lblNombre2
+            // lblNombre
             // 
-            this.lblNombre2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombre2.Location = new System.Drawing.Point(84, 76);
-            this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(69, 19);
-            this.lblNombre2.TabIndex = 6;
+            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre.Location = new System.Drawing.Point(84, 76);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 19);
+            this.lblNombre.TabIndex = 6;
             // 
-            // lblTramite2
+            // lblTramite
             // 
-            this.lblTramite2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTramite2.Location = new System.Drawing.Point(84, 111);
-            this.lblTramite2.Name = "lblTramite2";
-            this.lblTramite2.Size = new System.Drawing.Size(69, 19);
-            this.lblTramite2.TabIndex = 5;
+            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTramite.Location = new System.Drawing.Point(84, 111);
+            this.lblTramite.Name = "lblTramite";
+            this.lblTramite.Size = new System.Drawing.Size(69, 19);
+            this.lblTramite.TabIndex = 5;
             // 
-            // btnAgregar2
+            // btnEliminar
             // 
-            this.btnAgregar2.Location = new System.Drawing.Point(40, 149);
-            this.btnAgregar2.Name = "btnAgregar2";
-            this.btnAgregar2.Size = new System.Drawing.Size(113, 29);
-            this.btnAgregar2.TabIndex = 4;
-            this.btnAgregar2.Text = "Agregar";
-            this.btnAgregar2.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(40, 149);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(113, 29);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label2
             // 
@@ -213,26 +191,26 @@
             // 
             // marcoLIstayGrilla
             // 
-            this.marcoLIstayGrilla.Controls.Add(this.dgvDatosCliente);
             this.marcoLIstayGrilla.Controls.Add(this.lstCola);
+            this.marcoLIstayGrilla.Controls.Add(this.dgvCola);
             this.marcoLIstayGrilla.Location = new System.Drawing.Point(22, 248);
             this.marcoLIstayGrilla.Name = "marcoLIstayGrilla";
-            this.marcoLIstayGrilla.Size = new System.Drawing.Size(737, 237);
+            this.marcoLIstayGrilla.Size = new System.Drawing.Size(737, 250);
             this.marcoLIstayGrilla.TabIndex = 3;
             this.marcoLIstayGrilla.TabStop = false;
             this.marcoLIstayGrilla.Text = "Listado en una Lista y Grilla";
             // 
-            // dgvDatosCliente
+            // dgvCola
             // 
-            this.dgvDatosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código,
             this.Nombre,
             this.Tramite});
-            this.dgvDatosCliente.Location = new System.Drawing.Point(352, 31);
-            this.dgvDatosCliente.Name = "dgvDatosCliente";
-            this.dgvDatosCliente.Size = new System.Drawing.Size(339, 192);
-            this.dgvDatosCliente.TabIndex = 1;
+            this.dgvCola.Location = new System.Drawing.Point(352, 31);
+            this.dgvCola.Name = "dgvCola";
+            this.dgvCola.Size = new System.Drawing.Size(339, 192);
+            this.dgvCola.TabIndex = 1;
             // 
             // Código
             // 
@@ -248,15 +226,6 @@
             // 
             this.Tramite.HeaderText = "Trámite";
             this.Tramite.Name = "Tramite";
-            // 
-            // lstCola
-            // 
-            this.lstCola.HideSelection = false;
-            this.lstCola.Location = new System.Drawing.Point(66, 31);
-            this.lstCola.Name = "lstCola";
-            this.lstCola.Size = new System.Drawing.Size(201, 192);
-            this.lstCola.TabIndex = 0;
-            this.lstCola.UseCompatibleStateImageBehavior = false;
             // 
             // btnVolver2
             // 
@@ -278,6 +247,35 @@
             this.pctImagenCola.TabIndex = 0;
             this.pctImagenCola.TabStop = false;
             // 
+            // lstCola
+            // 
+            this.lstCola.FormattingEnabled = true;
+            this.lstCola.Location = new System.Drawing.Point(43, 32);
+            this.lstCola.Name = "lstCola";
+            this.lstCola.Size = new System.Drawing.Size(246, 186);
+            this.lstCola.TabIndex = 2;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(89, 39);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(68, 20);
+            this.txtCodigo.TabIndex = 4;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(89, 73);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(68, 20);
+            this.txtNombre.TabIndex = 5;
+            // 
+            // txtTramite
+            // 
+            this.txtTramite.Location = new System.Drawing.Point(89, 110);
+            this.txtTramite.Name = "txtTramite";
+            this.txtTramite.Size = new System.Drawing.Size(68, 20);
+            this.txtTramite.TabIndex = 6;
+            // 
             // FrmCola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,7 +294,7 @@
             this.marcoElementoEliminado.ResumeLayout(false);
             this.marcoElementoEliminado.PerformLayout();
             this.marcoLIstayGrilla.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctImagenCola)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -307,27 +305,27 @@
 
         private System.Windows.Forms.PictureBox pctImagenCola;
         private System.Windows.Forms.GroupBox marcoNuevoElemento;
-        private System.Windows.Forms.Label lblTramite1;
-        private System.Windows.Forms.Label lblNombre1;
-        private System.Windows.Forms.Label lblCodigo1;
         private System.Windows.Forms.Button btnAgregar1;
         private System.Windows.Forms.Label lblTram;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.GroupBox marcoElementoEliminado;
-        private System.Windows.Forms.Label lblCodigo2;
-        private System.Windows.Forms.Label lblNombre2;
-        private System.Windows.Forms.Label lblTramite2;
-        private System.Windows.Forms.Button btnAgregar2;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblTramite;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCodi;
         private System.Windows.Forms.GroupBox marcoLIstayGrilla;
-        private System.Windows.Forms.DataGridView dgvDatosCliente;
+        private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
-        private System.Windows.Forms.ListView lstCola;
         private System.Windows.Forms.Button btnVolver2;
+        private System.Windows.Forms.ListBox lstCola;
+        private System.Windows.Forms.TextBox txtTramite;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }
