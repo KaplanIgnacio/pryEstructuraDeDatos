@@ -40,5 +40,19 @@ namespace pryEstructuraDeDatos
         {
             Application.Exit();
         }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila v3 = new frmPila();
+            v3.Show();
+            this.Hide();
+        }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListaSimple v4 = new FrmListaSimple();
+            v4.Show();
+            this.Hide();
+        }
     }
 }

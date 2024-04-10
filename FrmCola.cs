@@ -60,5 +60,10 @@ namespace pryEstructuraDeDatos
                 lblTramite.Text = "";
             }
         }
+
+        private void FrmCola_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

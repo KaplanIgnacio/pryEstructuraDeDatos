@@ -1,6 +1,6 @@
 ﻿namespace pryEstructuraDeDatos
 {
-    partial class FrmCola
+    partial class frmPila
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.marcoNuevoElemento = new System.Windows.Forms.GroupBox();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -50,14 +51,23 @@
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnVolver2 = new System.Windows.Forms.Button();
-            this.pctImagenCola = new System.Windows.Forms.PictureBox();
+            this.btnVolver3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.marcoNuevoElemento.SuspendLayout();
             this.marcoElementoEliminado.SuspendLayout();
             this.marcoLIstayGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctImagenCola)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources._1200px_Pila_svg;
+            this.pictureBox1.Location = new System.Drawing.Point(40, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 218);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // marcoNuevoElemento
             // 
@@ -71,7 +81,7 @@
             this.marcoNuevoElemento.Location = new System.Drawing.Point(311, 27);
             this.marcoNuevoElemento.Name = "marcoNuevoElemento";
             this.marcoNuevoElemento.Size = new System.Drawing.Size(182, 192);
-            this.marcoNuevoElemento.TabIndex = 1;
+            this.marcoNuevoElemento.TabIndex = 2;
             this.marcoNuevoElemento.TabStop = false;
             this.marcoNuevoElemento.Text = "Nuevo Elemento";
             // 
@@ -104,7 +114,6 @@
             this.btnAgregar1.TabIndex = 3;
             this.btnAgregar1.Text = "Agregar";
             this.btnAgregar1.UseVisualStyleBackColor = true;
-            this.btnAgregar1.Click += new System.EventHandler(this.btnAgregar1_Click);
             // 
             // lblTram
             // 
@@ -142,10 +151,10 @@
             this.marcoElementoEliminado.Controls.Add(this.label2);
             this.marcoElementoEliminado.Controls.Add(this.label1);
             this.marcoElementoEliminado.Controls.Add(this.lblCodi);
-            this.marcoElementoEliminado.Location = new System.Drawing.Point(578, 27);
+            this.marcoElementoEliminado.Location = new System.Drawing.Point(577, 27);
             this.marcoElementoEliminado.Name = "marcoElementoEliminado";
             this.marcoElementoEliminado.Size = new System.Drawing.Size(182, 192);
-            this.marcoElementoEliminado.TabIndex = 2;
+            this.marcoElementoEliminado.TabIndex = 3;
             this.marcoElementoEliminado.TabStop = false;
             this.marcoElementoEliminado.Text = "Elemento Eliminado";
             // 
@@ -181,7 +190,6 @@
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label2
             // 
@@ -214,10 +222,10 @@
             // 
             this.marcoLIstayGrilla.Controls.Add(this.lstCola);
             this.marcoLIstayGrilla.Controls.Add(this.dgvCola);
-            this.marcoLIstayGrilla.Location = new System.Drawing.Point(22, 248);
+            this.marcoLIstayGrilla.Location = new System.Drawing.Point(40, 256);
             this.marcoLIstayGrilla.Name = "marcoLIstayGrilla";
-            this.marcoLIstayGrilla.Size = new System.Drawing.Size(737, 250);
-            this.marcoLIstayGrilla.TabIndex = 3;
+            this.marcoLIstayGrilla.Size = new System.Drawing.Size(722, 250);
+            this.marcoLIstayGrilla.TabIndex = 4;
             this.marcoLIstayGrilla.TabStop = false;
             this.marcoLIstayGrilla.Text = "Listado en una Lista y Grilla";
             // 
@@ -256,56 +264,47 @@
             this.Tramite.HeaderText = "Trámite";
             this.Tramite.Name = "Tramite";
             // 
-            // btnVolver2
+            // btnVolver3
             // 
-            this.btnVolver2.Location = new System.Drawing.Point(22, 504);
-            this.btnVolver2.Name = "btnVolver2";
-            this.btnVolver2.Size = new System.Drawing.Size(76, 26);
-            this.btnVolver2.TabIndex = 4;
-            this.btnVolver2.Text = "Volver";
-            this.btnVolver2.UseVisualStyleBackColor = true;
-            this.btnVolver2.Click += new System.EventHandler(this.btnVolver2_Click);
+            this.btnVolver3.Location = new System.Drawing.Point(40, 518);
+            this.btnVolver3.Name = "btnVolver3";
+            this.btnVolver3.Size = new System.Drawing.Size(76, 26);
+            this.btnVolver3.TabIndex = 5;
+            this.btnVolver3.Text = "Volver";
+            this.btnVolver3.UseVisualStyleBackColor = true;
+            this.btnVolver3.Click += new System.EventHandler(this.btnVolver3_Click);
             // 
-            // pctImagenCola
-            // 
-            this.pctImagenCola.Image = global::pryEstructuraDeDatos.Properties.Resources.cola;
-            this.pctImagenCola.Location = new System.Drawing.Point(22, 14);
-            this.pctImagenCola.Name = "pctImagenCola";
-            this.pctImagenCola.Size = new System.Drawing.Size(217, 218);
-            this.pctImagenCola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pctImagenCola.TabIndex = 0;
-            this.pctImagenCola.TabStop = false;
-            // 
-            // FrmCola
+            // frmPila
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 542);
-            this.Controls.Add(this.btnVolver2);
+            this.ClientSize = new System.Drawing.Size(800, 556);
+            this.Controls.Add(this.btnVolver3);
             this.Controls.Add(this.marcoLIstayGrilla);
             this.Controls.Add(this.marcoElementoEliminado);
             this.Controls.Add(this.marcoNuevoElemento);
-            this.Controls.Add(this.pctImagenCola);
-            this.Name = "FrmCola";
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "frmPila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCola";
-            this.Load += new System.EventHandler(this.FrmCola_Load);
+            this.Text = "frmPila";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.marcoNuevoElemento.ResumeLayout(false);
             this.marcoNuevoElemento.PerformLayout();
             this.marcoElementoEliminado.ResumeLayout(false);
             this.marcoElementoEliminado.PerformLayout();
             this.marcoLIstayGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctImagenCola)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pctImagenCola;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox marcoNuevoElemento;
+        private System.Windows.Forms.TextBox txtTramite;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnAgregar1;
         private System.Windows.Forms.Label lblTram;
         private System.Windows.Forms.Label lblNom;
@@ -319,14 +318,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCodi;
         private System.Windows.Forms.GroupBox marcoLIstayGrilla;
+        private System.Windows.Forms.ListBox lstCola;
         private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
-        private System.Windows.Forms.Button btnVolver2;
-        private System.Windows.Forms.ListBox lstCola;
-        private System.Windows.Forms.TextBox txtTramite;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Button btnVolver3;
     }
 }
