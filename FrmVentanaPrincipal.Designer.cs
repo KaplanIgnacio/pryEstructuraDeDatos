@@ -136,6 +136,7 @@
             this.listaDobleToolStripMenuItem1.Name = "listaDobleToolStripMenuItem1";
             this.listaDobleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.listaDobleToolStripMenuItem1.Text = "Lista Doble...";
+            this.listaDobleToolStripMenuItem1.Click += new System.EventHandler(this.listaDobleToolStripMenuItem1_Click);
             // 
             // estructuraNoLinealesToolStripMenuItem
             // 

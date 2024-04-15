@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace pryEstructuraDeDatos
 {
-    public partial class FrmListaSimple : Form
+    public partial class FrmListaDoble : Form
     {
-        public FrmListaSimple()
+        public FrmListaDoble()
         {
             InitializeComponent();
         }
 
-        private void btnVolver4_Click(object sender, EventArgs e)
+        private void btnVolver5_Click(object sender, EventArgs e)
         {
-            FrmVentanaPrincipal a4 = new FrmVentanaPrincipal();
-            a4.Show();
+            FrmVentanaPrincipal a5 = new FrmVentanaPrincipal();
+            a5.Show();
             this.Hide();
         }
 
-        private void btnAgregar3_Click(object sender, EventArgs e)
+        private void btnAgregar4_Click(object sender, EventArgs e)
         {
 
         }

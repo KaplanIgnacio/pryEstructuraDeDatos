@@ -33,7 +33,7 @@
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.btnAgregar1 = new System.Windows.Forms.Button();
+            this.btnAgregar2 = new System.Windows.Forms.Button();
             this.lblTram = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.marcoNuevoElemento.Controls.Add(this.txtTramite);
             this.marcoNuevoElemento.Controls.Add(this.txtNombre);
             this.marcoNuevoElemento.Controls.Add(this.txtCodigo);
-            this.marcoNuevoElemento.Controls.Add(this.btnAgregar1);
+            this.marcoNuevoElemento.Controls.Add(this.btnAgregar2);
             this.marcoNuevoElemento.Controls.Add(this.lblTram);
             this.marcoNuevoElemento.Controls.Add(this.lblNom);
             this.marcoNuevoElemento.Controls.Add(this.lblCod);
@@ -106,14 +106,15 @@
             this.txtCodigo.Size = new System.Drawing.Size(68, 20);
             this.txtCodigo.TabIndex = 4;
             // 
-            // btnAgregar1
+            // btnAgregar2
             // 
-            this.btnAgregar1.Location = new System.Drawing.Point(32, 149);
-            this.btnAgregar1.Name = "btnAgregar1";
-            this.btnAgregar1.Size = new System.Drawing.Size(113, 29);
-            this.btnAgregar1.TabIndex = 3;
-            this.btnAgregar1.Text = "Agregar";
-            this.btnAgregar1.UseVisualStyleBackColor = true;
+            this.btnAgregar2.Location = new System.Drawing.Point(32, 149);
+            this.btnAgregar2.Name = "btnAgregar2";
+            this.btnAgregar2.Size = new System.Drawing.Size(113, 29);
+            this.btnAgregar2.TabIndex = 3;
+            this.btnAgregar2.Text = "Agregar";
+            this.btnAgregar2.UseVisualStyleBackColor = true;
+            this.btnAgregar2.Click += new System.EventHandler(this.btnAgregar2_Click);
             // 
             // lblTram
             // 
@@ -190,6 +191,7 @@
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label2
             // 
@@ -305,7 +307,7 @@
         private System.Windows.Forms.TextBox txtTramite;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Button btnAgregar1;
+        private System.Windows.Forms.Button btnAgregar2;
         private System.Windows.Forms.Label lblTram;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblCod;

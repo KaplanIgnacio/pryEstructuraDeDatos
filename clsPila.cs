@@ -9,11 +9,10 @@ using System.Windows.Forms;
 
 namespace pryEstructuraDeDatos
 {
-    internal class clsCola
+    internal class clsPila
     {
         //Campo de las clases
         private clsNodo pri;
-        private clsNodo ult;
 
         //Propiedades de la clase
         public clsNodo Primero
@@ -22,35 +21,22 @@ namespace pryEstructuraDeDatos
             set { pri = value; }
         }
 
-        public clsNodo Ultimo
-        {
-            get { return ult; }
-            set { ult = value; }
-        }
-
         public void Agregar(clsNodo Nuevo)
         {
             if (Primero == null)
             {
                 Primero = Nuevo;
-                Ultimo = Nuevo;
             }
             else
             {
-                Ultimo.Siguiente = Nuevo;
-                Ultimo = Nuevo;
+                Nuevo.Siguiente = Primero;
+                Primero = Nuevo;
             }
         }
 
-        //Las colas siempre eliminan el primer dato.
         public void Eliminar()
         {
-            if (Primero == Ultimo)
-            {
-                Primero = null;
-                Ultimo = null;
-            }
-            else
+            if (Primero != null)
             {
                 Primero = Primero.Siguiente;
             }

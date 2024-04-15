@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.marcoNuevoElemento = new System.Windows.Forms.GroupBox();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.btnAgregar1 = new System.Windows.Forms.Button();
+            this.btnAgregar3 = new System.Windows.Forms.Button();
             this.lblTram = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
@@ -47,29 +46,20 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolver4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.marcoNuevoElemento.SuspendLayout();
             this.marcoElementoEliminado.SuspendLayout();
             this.marcoLIstayGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources.insercion;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 218);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // marcoNuevoElemento
             // 
             this.marcoNuevoElemento.Controls.Add(this.txtTramite);
             this.marcoNuevoElemento.Controls.Add(this.txtNombre);
             this.marcoNuevoElemento.Controls.Add(this.txtCodigo);
-            this.marcoNuevoElemento.Controls.Add(this.btnAgregar1);
+            this.marcoNuevoElemento.Controls.Add(this.btnAgregar3);
             this.marcoNuevoElemento.Controls.Add(this.lblTram);
             this.marcoNuevoElemento.Controls.Add(this.lblNom);
             this.marcoNuevoElemento.Controls.Add(this.lblCod);
@@ -101,14 +91,15 @@
             this.txtCodigo.Size = new System.Drawing.Size(68, 20);
             this.txtCodigo.TabIndex = 4;
             // 
-            // btnAgregar1
+            // btnAgregar3
             // 
-            this.btnAgregar1.Location = new System.Drawing.Point(32, 149);
-            this.btnAgregar1.Name = "btnAgregar1";
-            this.btnAgregar1.Size = new System.Drawing.Size(113, 29);
-            this.btnAgregar1.TabIndex = 3;
-            this.btnAgregar1.Text = "Agregar";
-            this.btnAgregar1.UseVisualStyleBackColor = true;
+            this.btnAgregar3.Location = new System.Drawing.Point(32, 149);
+            this.btnAgregar3.Name = "btnAgregar3";
+            this.btnAgregar3.Size = new System.Drawing.Size(113, 29);
+            this.btnAgregar3.TabIndex = 3;
+            this.btnAgregar3.Text = "Agregar";
+            this.btnAgregar3.UseVisualStyleBackColor = true;
+            this.btnAgregar3.Click += new System.EventHandler(this.btnAgregar3_Click);
             // 
             // lblTram
             // 
@@ -222,6 +213,16 @@
             this.btnVolver4.UseVisualStyleBackColor = true;
             this.btnVolver4.Click += new System.EventHandler(this.btnVolver4_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources.insercion;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 218);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,14 +234,15 @@
             this.Controls.Add(this.marcoNuevoElemento);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmListaSimple";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmListaSimple";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.marcoNuevoElemento.ResumeLayout(false);
             this.marcoNuevoElemento.PerformLayout();
             this.marcoElementoEliminado.ResumeLayout(false);
             this.marcoElementoEliminado.PerformLayout();
             this.marcoLIstayGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,7 +254,7 @@
         private System.Windows.Forms.TextBox txtTramite;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Button btnAgregar1;
+        private System.Windows.Forms.Button btnAgregar3;
         private System.Windows.Forms.Label lblTram;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblCod;

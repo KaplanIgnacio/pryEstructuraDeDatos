@@ -93,6 +93,16 @@ namespace pryEstructuraDeDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lista_doble {
+            get {
+                object obj = ResourceManager.GetObject("lista doble", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2024_02_01_at_06_03_57 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2024-02-01 at 06.03.57", resourceCulture);
