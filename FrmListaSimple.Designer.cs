@@ -47,6 +47,7 @@
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolver4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbLista = new System.Windows.Forms.ComboBox();
             this.marcoNuevoElemento.SuspendLayout();
             this.marcoElementoEliminado.SuspendLayout();
             this.marcoLIstayGrilla.SuspendLayout();
@@ -130,6 +131,7 @@
             // 
             // marcoElementoEliminado
             // 
+            this.marcoElementoEliminado.Controls.Add(this.cmbLista);
             this.marcoElementoEliminado.Controls.Add(this.btnEliminar);
             this.marcoElementoEliminado.Controls.Add(this.lblCodi);
             this.marcoElementoEliminado.Location = new System.Drawing.Point(588, 33);
@@ -141,17 +143,18 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(40, 149);
+            this.btnEliminar.Location = new System.Drawing.Point(29, 117);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(113, 29);
+            this.btnEliminar.Size = new System.Drawing.Size(124, 29);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodi
             // 
             this.lblCodi.AutoSize = true;
-            this.lblCodi.Location = new System.Drawing.Point(26, 108);
+            this.lblCodi.Location = new System.Drawing.Point(26, 76);
             this.lblCodi.Name = "lblCodi";
             this.lblCodi.Size = new System.Drawing.Size(43, 13);
             this.lblCodi.TabIndex = 1;
@@ -223,6 +226,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // cmbLista
+            // 
+            this.cmbLista.FormattingEnabled = true;
+            this.cmbLista.Location = new System.Drawing.Point(75, 72);
+            this.cmbLista.Name = "cmbLista";
+            this.cmbLista.Size = new System.Drawing.Size(77, 21);
+            this.cmbLista.TabIndex = 5;
+            // 
             // FrmListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,7 +246,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmListaSimple";
+            this.Text = "Estructura de Datos Lineal: Lista Simple";
             this.marcoNuevoElemento.ResumeLayout(false);
             this.marcoNuevoElemento.PerformLayout();
             this.marcoElementoEliminado.ResumeLayout(false);
@@ -268,5 +279,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
         private System.Windows.Forms.Button btnVolver4;
+        private System.Windows.Forms.ComboBox cmbLista;
     }
 }
