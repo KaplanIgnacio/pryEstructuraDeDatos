@@ -283,7 +283,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmListaDoble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista Doblemente Enlazada";
+            this.Text = "  ";
             this.marcoLIstayGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
             this.marcoElementoEliminado.ResumeLayout(false);

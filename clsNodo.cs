@@ -13,6 +13,7 @@ namespace pryEstructuraDeDatos
         private String nom;
         private String tra;
         private clsNodo sig;
+        private clsNodo ant;
 
         //Propiedades del Nodo
 
@@ -39,6 +40,12 @@ namespace pryEstructuraDeDatos
         {
             get { return sig; }
             set { sig = value; }
+        }
+
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
         }
     }
 }
