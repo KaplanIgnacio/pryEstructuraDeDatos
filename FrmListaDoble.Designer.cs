@@ -36,7 +36,7 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcoElementoEliminado = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbLista = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodi = new System.Windows.Forms.Label();
             this.marcoNuevoElemento = new System.Windows.Forms.GroupBox();
@@ -117,7 +117,7 @@
             // 
             // marcoElementoEliminado
             // 
-            this.marcoElementoEliminado.Controls.Add(this.comboBox1);
+            this.marcoElementoEliminado.Controls.Add(this.cmbLista);
             this.marcoElementoEliminado.Controls.Add(this.btnEliminar);
             this.marcoElementoEliminado.Controls.Add(this.lblCodi);
             this.marcoElementoEliminado.Location = new System.Drawing.Point(587, 24);
@@ -127,13 +127,13 @@
             this.marcoElementoEliminado.TabStop = false;
             this.marcoElementoEliminado.Text = "Elemento a eliminar";
             // 
-            // comboBox1
+            // cmbLista
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(61, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
-            this.comboBox1.TabIndex = 11;
+            this.cmbLista.FormattingEnabled = true;
+            this.cmbLista.Location = new System.Drawing.Point(61, 25);
+            this.cmbLista.Name = "cmbLista";
+            this.cmbLista.Size = new System.Drawing.Size(115, 21);
+            this.cmbLista.TabIndex = 11;
             // 
             // btnEliminar
             // 
@@ -143,6 +143,7 @@
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodi
             // 
@@ -318,7 +319,7 @@
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbLista;
         private System.Windows.Forms.GroupBox mrcListarDatos;
         private System.Windows.Forms.RadioButton radioButtonDescendente;
         private System.Windows.Forms.RadioButton radioButtonAscendente;

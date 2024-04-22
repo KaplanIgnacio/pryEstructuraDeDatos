@@ -17,6 +17,8 @@ namespace pryEstructuraDeDatos
             InitializeComponent();
         }
 
+        clsListaDoble Lista = new clsListaDoble();
+
         private void btnVolver5_Click(object sender, EventArgs e)
         {
             FrmVentanaPrincipal a5 = new FrmVentanaPrincipal();
@@ -26,7 +28,36 @@ namespace pryEstructuraDeDatos
 
         private void btnAgregar4_Click(object sender, EventArgs e)
         {
+            clsNodo ObjNodo = new clsNodo();
+            ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            ObjNodo.Nombre = txtNombre.Text;
+            ObjNodo.Tramite = txtTramite.Text;
+            Lista.Agregar(ObjNodo);
+            Lista.Recorrer(dgvCola);
+            Lista.RecorrerDes(dgvCola);
+            Lista.Recorrer(lstCola);
+            Lista.Recorrer(cmbLista);
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+        }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (Lista.Primero != null)
+            {
+                Int32 x = Convert.ToInt32(cmbLista.Text);
+                Lista.Eliminar(x);
+                Lista.Recorrer(dgvCola);
+                Lista.RecorrerDes(dgvCola);
+                Lista.Recorrer(lstCola);
+                Lista.Recorrer();
+            }
+            else
+            {
+                MessageBox.Show("La lista está vacia");
+                cmbLista.Items.Clear();
+            }
         }
     }
 }
