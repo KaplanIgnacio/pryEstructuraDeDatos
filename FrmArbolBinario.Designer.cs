@@ -1,6 +1,6 @@
 ﻿namespace pryEstructuraDeDatos
 {
-    partial class FrmListaDoble
+    partial class FrmArbolBinario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnVolver5 = new System.Windows.Forms.Button();
+            this.btnVolver6 = new System.Windows.Forms.Button();
             this.marcoLIstayGrilla = new System.Windows.Forms.GroupBox();
-            this.lstCola = new System.Windows.Forms.ListBox();
             this.dgvCola = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,46 +46,41 @@
             this.lblTram = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
-            this.mrcListarDatos = new System.Windows.Forms.GroupBox();
-            this.rbDescendente = new System.Windows.Forms.RadioButton();
-            this.rbAscendente = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEquilibrar = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.rbInOrdenAscendente = new System.Windows.Forms.RadioButton();
+            this.rbInOrdenDescendente = new System.Windows.Forms.RadioButton();
+            this.rbPreOrden = new System.Windows.Forms.RadioButton();
+            this.rbPostOrden = new System.Windows.Forms.RadioButton();
             this.marcoLIstayGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
             this.marcoElementoEliminado.SuspendLayout();
             this.marcoNuevoElemento.SuspendLayout();
-            this.mrcListarDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnVolver5
+            // btnVolver6
             // 
-            this.btnVolver5.Location = new System.Drawing.Point(32, 508);
-            this.btnVolver5.Name = "btnVolver5";
-            this.btnVolver5.Size = new System.Drawing.Size(76, 26);
-            this.btnVolver5.TabIndex = 10;
-            this.btnVolver5.Text = "Volver";
-            this.btnVolver5.UseVisualStyleBackColor = true;
-            this.btnVolver5.Click += new System.EventHandler(this.btnVolver5_Click);
+            this.btnVolver6.Location = new System.Drawing.Point(32, 508);
+            this.btnVolver6.Name = "btnVolver6";
+            this.btnVolver6.Size = new System.Drawing.Size(76, 26);
+            this.btnVolver6.TabIndex = 16;
+            this.btnVolver6.Text = "Volver";
+            this.btnVolver6.UseVisualStyleBackColor = true;
+            this.btnVolver6.Click += new System.EventHandler(this.btnVolver6_Click);
             // 
             // marcoLIstayGrilla
             // 
-            this.marcoLIstayGrilla.Controls.Add(this.lstCola);
+            this.marcoLIstayGrilla.Controls.Add(this.rbPostOrden);
+            this.marcoLIstayGrilla.Controls.Add(this.rbPreOrden);
+            this.marcoLIstayGrilla.Controls.Add(this.rbInOrdenDescendente);
+            this.marcoLIstayGrilla.Controls.Add(this.rbInOrdenAscendente);
             this.marcoLIstayGrilla.Controls.Add(this.dgvCola);
             this.marcoLIstayGrilla.Location = new System.Drawing.Point(32, 243);
             this.marcoLIstayGrilla.Name = "marcoLIstayGrilla";
             this.marcoLIstayGrilla.Size = new System.Drawing.Size(737, 250);
-            this.marcoLIstayGrilla.TabIndex = 9;
+            this.marcoLIstayGrilla.TabIndex = 15;
             this.marcoLIstayGrilla.TabStop = false;
             this.marcoLIstayGrilla.Text = "Listado en una Lista y Grilla";
-            // 
-            // lstCola
-            // 
-            this.lstCola.FormattingEnabled = true;
-            this.lstCola.Location = new System.Drawing.Point(43, 32);
-            this.lstCola.Name = "lstCola";
-            this.lstCola.Size = new System.Drawing.Size(246, 186);
-            this.lstCola.TabIndex = 2;
             // 
             // dgvCola
             // 
@@ -120,10 +114,10 @@
             this.marcoElementoEliminado.Controls.Add(this.cmbLista);
             this.marcoElementoEliminado.Controls.Add(this.btnEliminar);
             this.marcoElementoEliminado.Controls.Add(this.lblCodi);
-            this.marcoElementoEliminado.Location = new System.Drawing.Point(587, 24);
+            this.marcoElementoEliminado.Location = new System.Drawing.Point(564, 24);
             this.marcoElementoEliminado.Name = "marcoElementoEliminado";
             this.marcoElementoEliminado.Size = new System.Drawing.Size(182, 104);
-            this.marcoElementoEliminado.TabIndex = 8;
+            this.marcoElementoEliminado.TabIndex = 14;
             this.marcoElementoEliminado.TabStop = false;
             this.marcoElementoEliminado.Text = "Elemento a eliminar";
             // 
@@ -166,7 +160,7 @@
             this.marcoNuevoElemento.Location = new System.Drawing.Point(322, 24);
             this.marcoNuevoElemento.Name = "marcoNuevoElemento";
             this.marcoNuevoElemento.Size = new System.Drawing.Size(182, 192);
-            this.marcoNuevoElemento.TabIndex = 7;
+            this.marcoNuevoElemento.TabIndex = 13;
             this.marcoNuevoElemento.TabStop = false;
             this.marcoNuevoElemento.Text = "Nuevo Elemento";
             // 
@@ -228,86 +222,101 @@
             this.lblCod.TabIndex = 0;
             this.lblCod.Text = "Código:";
             // 
-            // mrcListarDatos
+            // btnEquilibrar
             // 
-            this.mrcListarDatos.Controls.Add(this.rbDescendente);
-            this.mrcListarDatos.Controls.Add(this.rbAscendente);
-            this.mrcListarDatos.Location = new System.Drawing.Point(585, 146);
-            this.mrcListarDatos.Name = "mrcListarDatos";
-            this.mrcListarDatos.Size = new System.Drawing.Size(183, 79);
-            this.mrcListarDatos.TabIndex = 11;
-            this.mrcListarDatos.TabStop = false;
-            this.mrcListarDatos.Text = "Listar Datos";
+            this.btnEquilibrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEquilibrar.Location = new System.Drawing.Point(564, 163);
+            this.btnEquilibrar.Name = "btnEquilibrar";
+            this.btnEquilibrar.Size = new System.Drawing.Size(182, 39);
+            this.btnEquilibrar.TabIndex = 17;
+            this.btnEquilibrar.Text = "Equilibrar";
+            this.btnEquilibrar.UseVisualStyleBackColor = true;
             // 
-            // rbDescendente
+            // treeView1
             // 
-            this.rbDescendente.AutoSize = true;
-            this.rbDescendente.Location = new System.Drawing.Point(22, 53);
-            this.rbDescendente.Name = "rbDescendente";
-            this.rbDescendente.Size = new System.Drawing.Size(89, 17);
-            this.rbDescendente.TabIndex = 12;
-            this.rbDescendente.TabStop = true;
-            this.rbDescendente.Text = "Descendente";
-            this.rbDescendente.UseVisualStyleBackColor = true;
+            this.treeView1.Location = new System.Drawing.Point(32, 24);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(233, 192);
+            this.treeView1.TabIndex = 18;
             // 
-            // rbAscendente
+            // rbInOrdenAscendente
             // 
-            this.rbAscendente.AutoSize = true;
-            this.rbAscendente.Location = new System.Drawing.Point(22, 27);
-            this.rbAscendente.Name = "rbAscendente";
-            this.rbAscendente.Size = new System.Drawing.Size(82, 17);
-            this.rbAscendente.TabIndex = 0;
-            this.rbAscendente.TabStop = true;
-            this.rbAscendente.Text = "Ascendente";
-            this.rbAscendente.UseVisualStyleBackColor = true;
+            this.rbInOrdenAscendente.AutoSize = true;
+            this.rbInOrdenAscendente.Location = new System.Drawing.Point(65, 63);
+            this.rbInOrdenAscendente.Name = "rbInOrdenAscendente";
+            this.rbInOrdenAscendente.Size = new System.Drawing.Size(126, 17);
+            this.rbInOrdenAscendente.TabIndex = 2;
+            this.rbInOrdenAscendente.TabStop = true;
+            this.rbInOrdenAscendente.Text = "In-Orden Ascendente";
+            this.rbInOrdenAscendente.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // rbInOrdenDescendente
             // 
-            this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources.lista_doble;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 205);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.rbInOrdenDescendente.AutoSize = true;
+            this.rbInOrdenDescendente.Location = new System.Drawing.Point(65, 101);
+            this.rbInOrdenDescendente.Name = "rbInOrdenDescendente";
+            this.rbInOrdenDescendente.Size = new System.Drawing.Size(133, 17);
+            this.rbInOrdenDescendente.TabIndex = 3;
+            this.rbInOrdenDescendente.TabStop = true;
+            this.rbInOrdenDescendente.Text = "In-Orden Descendente";
+            this.rbInOrdenDescendente.UseVisualStyleBackColor = true;
             // 
-            // FrmListaDoble
+            // rbPreOrden
+            // 
+            this.rbPreOrden.AutoSize = true;
+            this.rbPreOrden.Location = new System.Drawing.Point(65, 143);
+            this.rbPreOrden.Name = "rbPreOrden";
+            this.rbPreOrden.Size = new System.Drawing.Size(73, 17);
+            this.rbPreOrden.TabIndex = 4;
+            this.rbPreOrden.TabStop = true;
+            this.rbPreOrden.Text = "Pre-Orden";
+            this.rbPreOrden.UseVisualStyleBackColor = true;
+            // 
+            // rbPostOrden
+            // 
+            this.rbPostOrden.AutoSize = true;
+            this.rbPostOrden.Location = new System.Drawing.Point(65, 184);
+            this.rbPostOrden.Name = "rbPostOrden";
+            this.rbPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.rbPostOrden.TabIndex = 5;
+            this.rbPostOrden.TabStop = true;
+            this.rbPostOrden.Text = "Post-Orden";
+            this.rbPostOrden.UseVisualStyleBackColor = true;
+            // 
+            // FrmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 542);
-            this.Controls.Add(this.mrcListarDatos);
-            this.Controls.Add(this.btnVolver5);
+            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.btnEquilibrar);
+            this.Controls.Add(this.btnVolver6);
             this.Controls.Add(this.marcoLIstayGrilla);
             this.Controls.Add(this.marcoElementoEliminado);
             this.Controls.Add(this.marcoNuevoElemento);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "FrmListaDoble";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "  ";
+            this.Name = "FrmArbolBinario";
+            this.Text = "FrmArbolBinario";
             this.marcoLIstayGrilla.ResumeLayout(false);
+            this.marcoLIstayGrilla.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
             this.marcoElementoEliminado.ResumeLayout(false);
             this.marcoElementoEliminado.PerformLayout();
             this.marcoNuevoElemento.ResumeLayout(false);
             this.marcoNuevoElemento.PerformLayout();
-            this.mrcListarDatos.ResumeLayout(false);
-            this.mrcListarDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnVolver5;
+        private System.Windows.Forms.Button btnVolver6;
         private System.Windows.Forms.GroupBox marcoLIstayGrilla;
-        private System.Windows.Forms.ListBox lstCola;
         private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
         private System.Windows.Forms.GroupBox marcoElementoEliminado;
+        private System.Windows.Forms.ComboBox cmbLista;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblCodi;
         private System.Windows.Forms.GroupBox marcoNuevoElemento;
@@ -318,10 +327,11 @@
         private System.Windows.Forms.Label lblTram;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblCod;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbLista;
-        private System.Windows.Forms.GroupBox mrcListarDatos;
-        private System.Windows.Forms.RadioButton rbDescendente;
-        private System.Windows.Forms.RadioButton rbAscendente;
+        private System.Windows.Forms.Button btnEquilibrar;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.RadioButton rbPostOrden;
+        private System.Windows.Forms.RadioButton rbPreOrden;
+        private System.Windows.Forms.RadioButton rbInOrdenDescendente;
+        private System.Windows.Forms.RadioButton rbInOrdenAscendente;
     }
 }

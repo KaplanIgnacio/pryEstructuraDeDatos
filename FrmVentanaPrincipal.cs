@@ -61,5 +61,12 @@ namespace pryEstructuraDeDatos
             v5.Show();
             this.Hide();
         }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmArbolBinario v6 = new FrmArbolBinario();
+            v6.Show();
+            this.Hide();
+        }
     }
 }
