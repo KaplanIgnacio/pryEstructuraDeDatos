@@ -249,6 +249,7 @@
             this.rbDescendente.TabStop = true;
             this.rbDescendente.Text = "Descendente";
             this.rbDescendente.UseVisualStyleBackColor = true;
+            this.rbDescendente.CheckedChanged += new System.EventHandler(this.rbDescendente_CheckedChanged);
             // 
             // rbAscendente
             // 
@@ -260,6 +261,7 @@
             this.rbAscendente.TabStop = true;
             this.rbAscendente.Text = "Ascendente";
             this.rbAscendente.UseVisualStyleBackColor = true;
+            this.rbAscendente.CheckedChanged += new System.EventHandler(this.rbAscendente_CheckedChanged);
             // 
             // pictureBox1
             // 
@@ -284,7 +286,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmListaDoble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "  ";
+            this.Text = "Estructura de Datos Lineal: Lista Doble";
             this.marcoLIstayGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
             this.marcoElementoEliminado.ResumeLayout(false);

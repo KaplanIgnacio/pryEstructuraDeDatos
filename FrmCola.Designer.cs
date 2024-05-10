@@ -288,7 +288,7 @@
             this.Controls.Add(this.pctImagenCola);
             this.Name = "FrmCola";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCola";
+            this.Text = "Estructura de Datos Lineal: Cola";
             this.Load += new System.EventHandler(this.FrmCola_Load);
             this.marcoNuevoElemento.ResumeLayout(false);
             this.marcoNuevoElemento.PerformLayout();

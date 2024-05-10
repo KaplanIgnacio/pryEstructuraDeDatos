@@ -34,9 +34,10 @@ namespace pryEstructuraDeDatos
             ObjNodo.Nombre = txtNombre.Text;
             ObjNodo.Tramite = txtTramite.Text;
             Arbol.Agregar(ObjNodo);
-            Arbol.Recorrer(dgvCola);
-            Arbol.Recorrer(treeView1);
-            //Arbol.Recorrer(cmbLista);
+            Arbol.RecorrerAsc(dgvArbol);
+            Arbol.Recorrer(tvArbol);
+            Arbol.RecorrerAsc(lstArbol);
+            Arbol.RecorrerAsc(cmbArbol);
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
@@ -44,7 +45,56 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (Arbol.Raiz != null)
+            {
+                Int32 x = Convert.ToInt32(cmbArbol.Text);
+                Arbol.Eliminar(x); Arbol.RecorrerAsc(dgvArbol);
+                Arbol.RecorrerAsc(cmbArbol);
+                Arbol.RecorrerAsc(lstArbol);
+                Arbol.Recorrer(tvArbol);
+                cmbArbol.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("El árbol esta vacío"); cmbArbol.Text = "";
+            }
+        }
 
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+            Arbol.Equilibrar();
+            Arbol.RecorrerAsc(dgvArbol);
+            Arbol.RecorrerAsc(cmbArbol);
+            Arbol.RecorrerAsc(lstArbol);
+            Arbol.Recorrer(tvArbol);
+        }
+
+        private void rbInOrdenAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerAsc(dgvArbol);
+            Arbol.RecorrerAsc(cmbArbol);
+            Arbol.RecorrerAsc(lstArbol);
+        }
+
+        private void rbInOrdenDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerDesc(dgvArbol);
+            Arbol.RecorrerDesc(cmbArbol);
+            Arbol.RecorrerDesc(lstArbol);
+        }
+
+        private void rbPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerPre(dgvArbol);
+            Arbol.RecorrerPre(cmbArbol);
+            Arbol.RecorrerPre(lstArbol);
+        }
+
+        private void rbPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerPost(dgvArbol);
+            Arbol.RecorrerPost(cmbArbol);
+            Arbol.RecorrerPost(lstArbol);
         }
     }
 }

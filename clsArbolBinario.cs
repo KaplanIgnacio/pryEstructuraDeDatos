@@ -57,7 +57,7 @@ namespace pryEstructuraDeDatos
             }
         }
 
-        public void Recorrer(DataGridView Grilla)
+        public void RecorrerAsc(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
             InOrdenAsc(Grilla, Raiz);
@@ -70,7 +70,43 @@ namespace pryEstructuraDeDatos
             if (R.Derecho != null) InOrdenAsc(Dgv, R.Derecho);
         }
 
-        public void Recorrer(ListBox Lista)
+        public void RecorrerDesc(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            InOrdenDesc(Grilla, Raiz);
+        }
+        private void InOrdenDesc(DataGridView Dgv, clsNodo R)
+        {
+            if (R.Derecho != null) InOrdenDesc(Dgv, R.Derecho);
+            Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierdo != null) InOrdenDesc(Dgv, R.Izquierdo);
+        }
+
+        public void RecorrerPre(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrden(Grilla, Raiz);
+        }
+        private void PreOrden(DataGridView Dgv, clsNodo R)
+        {
+            Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierdo != null) PreOrden(Dgv, R.Izquierdo);
+            if (R.Derecho != null) PreOrden(Dgv, R.Derecho);
+        }
+
+        public void RecorrerPost(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrden(Grilla, Raiz);
+        }
+        private void PostOrden(DataGridView Dgv, clsNodo R)
+        {
+            if (R.Izquierdo != null) PostOrden(Dgv, R.Izquierdo);
+            if (R.Derecho != null) PostOrden(Dgv, R.Derecho);
+            Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+        }
+
+        public void RecorrerAsc(ListBox Lista)
         {
             Lista.Items.Clear();
             InOrdenAsc(Lista, Raiz);
@@ -87,6 +123,132 @@ namespace pryEstructuraDeDatos
             {
                 InOrdenAsc(Lst, R.Derecho);
             }
+        }
+
+        public void RecorrerDesc(ListBox Lista)
+        {
+            Lista.Items.Clear();
+            InOrdenDesc(Lista, Raiz);
+        }
+        public void InOrdenDesc(ListBox Lst, clsNodo R)
+        {
+            if (R.Derecho != null)
+            {
+                InOrdenDesc(Lst, R.Derecho);
+            }
+            Lst.Items.Add(R.Codigo);
+            if (R.Izquierdo != null)
+            {
+                InOrdenDesc(Lst, R.Izquierdo);
+            }
+        }
+
+        public void RecorrerPre(ListBox Lista)
+        {
+            Lista.Items.Clear();
+            PreOrden(Lista, Raiz);
+        }
+        public void PreOrden(ListBox Lst, clsNodo R)
+        {
+            Lst.Items.Add(R.Codigo);
+            if (R.Izquierdo != null)
+            {
+                PreOrden(Lst, R.Izquierdo);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrden(Lst, R.Derecho);
+            }
+        }
+
+        public void RecorrerPost(ListBox Lista)
+        {
+            Lista.Items.Clear();
+            PostOrden(Lista, Raiz);
+        }
+        public void PostOrden(ListBox Lst, clsNodo R)
+        {
+            if (R.Izquierdo != null)
+            {
+                PostOrden(Lst, R.Izquierdo);
+            }
+            if (R.Derecho != null)
+            {
+                PostOrden(Lst, R.Derecho);
+            }
+            Lst.Items.Add(R.Codigo);
+        }
+
+        public void RecorrerAsc(ComboBox Combo)
+        {
+            Combo.Items.Clear();
+            InOrdenAsc(Combo, Raiz);
+        }
+        private void InOrdenAsc(ComboBox cmb, clsNodo R)
+        {
+            if (R.Izquierdo != null)
+            {
+                InOrdenAsc(cmb, R.Izquierdo);
+            }
+            cmb.Items.Add(R.Codigo);
+            if (R.Derecho != null)
+            {
+                InOrdenAsc(cmb, R.Derecho);
+            }
+        }
+
+        public void RecorrerDesc(ComboBox Combo)
+        {
+            Combo.Items.Clear();
+            InOrdenDesc(Combo, Raiz);
+        }
+        private void InOrdenDesc(ComboBox cmb, clsNodo R)
+        {
+            if (R.Derecho != null)
+            {
+                InOrdenDesc(cmb, R.Derecho);
+            }
+            cmb.Items.Add(R.Codigo);
+            if (R.Izquierdo != null)
+            {
+                InOrdenDesc(cmb, R.Izquierdo);
+            }
+        }
+
+        public void RecorrerPre(ComboBox Combo)
+        {
+            Combo.Items.Clear();
+            PreOrden(Combo, Raiz);
+        }
+        public void PreOrden(ComboBox cmb, clsNodo R)
+        {
+            cmb.Items.Add(R.Codigo);
+            if (R.Izquierdo != null)
+            {
+                PreOrden(cmb, R.Izquierdo);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrden(cmb, R.Derecho);
+            }
+        }
+
+        public void RecorrerPost(ComboBox Combo)
+        {
+            Combo.Items.Clear();
+            PostOrden(Combo, Raiz);
+        }
+        public void PostOrden(ComboBox cmb, clsNodo R)
+        {
+            if (R.Izquierdo != null)
+            {
+                PostOrden(cmb, R.Izquierdo);
+            }
+            if (R.Derecho != null)
+            {
+                PostOrden(cmb, R.Derecho);
+            }
+            cmb.Items.Add(R.Codigo);
         }
 
         public void Recorrer(TreeView tree)

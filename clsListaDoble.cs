@@ -132,6 +132,17 @@ namespace pryEstructuraDeDatos
             }
         }
 
+        public void RecorrerDes(ListBox Lista)
+        {
+            clsNodo aux = Ultimo;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+        }
+
         public void Recorrer(ComboBox Combo)
         {
             clsNodo aux = Primero;

@@ -288,7 +288,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmPila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPila";
+            this.Text = "Estructura de Datos Lineal: Pila";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.marcoNuevoElemento.ResumeLayout(false);
             this.marcoNuevoElemento.PerformLayout();
