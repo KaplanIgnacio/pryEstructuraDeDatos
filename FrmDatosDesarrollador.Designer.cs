@@ -150,9 +150,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(358, 226);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(120, 18);
+            this.label10.Size = new System.Drawing.Size(172, 18);
             this.label10.TabIndex = 11;
-            this.label10.Text = "Primer Semestre";
+            this.label10.Text = "Primer Semestre del año";
             // 
             // pictureBox1
             // 

@@ -176,12 +176,14 @@
             this.operacionesConTablasDeBasesDeDatosToolStripMenuItem.Name = "operacionesConTablasDeBasesDeDatosToolStripMenuItem";
             this.operacionesConTablasDeBasesDeDatosToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
             this.operacionesConTablasDeBasesDeDatosToolStripMenuItem.Text = "Operaciones con tablas de bases de datos...";
+            this.operacionesConTablasDeBasesDeDatosToolStripMenuItem.Click += new System.EventHandler(this.operacionesConTablasDeBasesDeDatosToolStripMenuItem_Click);
             // 
             // consultasEnLaBaseDeDatosToolStripMenuItem
             // 
             this.consultasEnLaBaseDeDatosToolStripMenuItem.Name = "consultasEnLaBaseDeDatosToolStripMenuItem";
             this.consultasEnLaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
             this.consultasEnLaBaseDeDatosToolStripMenuItem.Text = "Consultas en la base de datos...";
+            this.consultasEnLaBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.consultasEnLaBaseDeDatosToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -193,6 +195,7 @@
             this.repasoDeOperacionesToolStripMenuItem.Name = "repasoDeOperacionesToolStripMenuItem";
             this.repasoDeOperacionesToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
             this.repasoDeOperacionesToolStripMenuItem.Text = "Repaso de Operaciones...";
+            this.repasoDeOperacionesToolStripMenuItem.Click += new System.EventHandler(this.repasoDeOperacionesToolStripMenuItem_Click);
             // 
             // FrmVentanaPrincipal
             // 

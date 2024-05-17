@@ -68,5 +68,26 @@ namespace pryEstructuraDeDatos
             v6.Show();
             this.Hide();
         }
+
+        private void operacionesConTablasDeBasesDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBaseDatosOperaciones v7 = new FrmBaseDatosOperaciones();
+            v7.Show();
+            this.Hide();
+        }
+
+        private void consultasEnLaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBaseDatosConsulta v8 = new FrmBaseDatosConsulta();
+            v8.Show();
+            this.Hide();
+        }
+
+        private void repasoDeOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBaseDatosRepasoOperaciones v8 = new FrmBaseDatosRepasoOperaciones();
+            v8.Show();
+            this.Hide();
+        }
     }
 }
